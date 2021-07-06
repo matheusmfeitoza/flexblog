@@ -356,7 +356,10 @@ img {
   text-align: center;
   color: white;
 }
-
+.footer p a {
+  color: #122ab2;
+  cursor: pointer;
+}
 @media (max-width: 600px) {
   .footer p {
     font-size: 1.25em;
