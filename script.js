@@ -5,9 +5,17 @@ function salvarData(){
         e.preventDefault();
         let emailValue = getEmail.value;
         localStorage.setItem('email',emailValue);
-        console.log(emailValue);
+        location.reload();
     });
-    document.getElementById('email').value = localStorage.email;
+    if(getEmail.value === null || getEmail.value === '' && localStorage.email === undefined){
+        localStorage.removeItem('email')
+        getEmail.value = "" 
+    
+    }else{
+        return getEmail.value = localStorage.email;
+    }
+    //  document.getElementById('email').value = localStorage.email;
+
 }
 salvarData();
 
